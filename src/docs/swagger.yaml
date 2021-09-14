@@ -1,0 +1,15 @@
+basePath: /api/v1
+host: api.example.a2os.club
+info:
+  contact:
+    name: Cozy
+    url: https://github.com/MasDeny
+  description: This is my go gin boilerplate api server.
+  license:
+    name: MIT
+    url: https://github.com/MasDeny/go-rest-boilerplate
+  termsOfService: http://swagger.io/terms/
+  title: GoGin Boilerplate API
+  version: "1.0"
+paths: {}
+swagger: "2.0"
