@@ -1,4 +1,4 @@
-package controllers
+package common
 
 import (
 	"net/http"
@@ -12,13 +12,11 @@ import (
 // @Description get string by ID
 // @Accept  json
 // @Produce  json
-// @Success 200 {string} string	"ok"
-// @Failure 400 {object} web.APIError "Undermaintenance !"
+// @Success 200 {object} Response
 // @Router /ping [get]
 func ServerHealth(c *gin.Context){
-	c.JSON(http.StatusOK, gin.H{
-			"status": "OK",
-	})
+	Error400(c, "Server Maintenance", 5003)
+	// c.JSON(http.StatusOK, BaseResponse("Status Server OK"))
 }
 
 func WelcomeGreeting(c *gin.Context){

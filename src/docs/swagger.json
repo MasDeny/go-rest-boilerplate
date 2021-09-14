@@ -14,7 +14,44 @@
         },
         "version": "1.0"
     },
-    "host": "api.example.a2os.club",
+    "host": "localhost:5050",
     "basePath": "/api/v1",
-    "paths": {}
+    "paths": {
+        "/ping": {
+            "get": {
+                "description": "get string by ID",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "Test Api Server",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/common.Response"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "common.Response": {
+            "type": "object",
+            "properties": {
+                "result": {
+                    "type": "object"
+                },
+                "status": {
+                    "type": "boolean"
+                },
+                "status_code": {
+                    "type": "integer"
+                }
+            }
+        }
+    }
 }

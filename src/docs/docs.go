@@ -30,7 +30,44 @@ var doc = `{
     },
     "host": "{{.Host}}",
     "basePath": "{{.BasePath}}",
-    "paths": {}
+    "paths": {
+        "/ping": {
+            "get": {
+                "description": "get string by ID",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "Test Api Server",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/common.Response"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "common.Response": {
+            "type": "object",
+            "properties": {
+                "result": {
+                    "type": "object"
+                },
+                "status": {
+                    "type": "boolean"
+                },
+                "status_code": {
+                    "type": "integer"
+                }
+            }
+        }
+    }
 }`
 
 type swaggerInfo struct {
@@ -45,7 +82,7 @@ type swaggerInfo struct {
 // SwaggerInfo holds exported Swagger Info so clients can modify it
 var SwaggerInfo = swaggerInfo{
 	Version:     "1.0",
-	Host:        "api.example.a2os.club",
+	Host:        "localhost:5050",
 	BasePath:    "/api/v1",
 	Schemes:     []string{},
 	Title:       "GoGin Boilerplate API",

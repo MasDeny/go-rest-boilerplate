@@ -20,7 +20,7 @@ import (
 // @license.name MIT
 // @license.url https://github.com/MasDeny/go-rest-boilerplate
 // @BasePath /api/v1
-// @host api.example.a2os.club
+// @host localhost:5050
 func Run() {
     app := gin.New()
 

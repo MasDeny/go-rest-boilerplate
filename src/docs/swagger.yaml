@@ -1,5 +1,15 @@
 basePath: /api/v1
-host: api.example.a2os.club
+definitions:
+  common.Response:
+    properties:
+      result:
+        type: object
+      status:
+        type: boolean
+      status_code:
+        type: integer
+    type: object
+host: localhost:5050
 info:
   contact:
     name: Cozy
@@ -11,5 +21,18 @@ info:
   termsOfService: http://swagger.io/terms/
   title: GoGin Boilerplate API
   version: "1.0"
-paths: {}
+paths:
+  /ping:
+    get:
+      consumes:
+      - application/json
+      description: get string by ID
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/common.Response'
+      summary: Test Api Server
 swagger: "2.0"
