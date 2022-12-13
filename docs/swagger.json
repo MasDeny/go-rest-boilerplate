@@ -1,26 +1,16 @@
 {
     "swagger": "2.0",
     "info": {
-        "description": "This is my go gin boilerplate api server.",
-        "title": "GoGin Boilerplate API",
-        "termsOfService": "http://swagger.io/terms/",
-        "contact": {
-            "name": "Cozy",
-            "url": "https://github.com/MasDeny"
-        },
-        "license": {
-            "name": "MIT",
-            "url": "https://github.com/MasDeny/go-rest-boilerplate"
-        },
-        "version": "1.0"
+        "contact": {}
     },
-    "host": "localhost:5050",
-    "basePath": "/api/v1",
     "paths": {
-        "/": {
+        "/intialize/": {
             "get": {
                 "produces": [
                     "application/json"
+                ],
+                "tags": [
+                    "Initialize"
                 ],
                 "summary": "Server Greeting",
                 "responses": {
@@ -51,7 +41,7 @@
                 }
             }
         },
-        "/ping": {
+        "/intialize/ping": {
             "get": {
                 "description": "get string by ID",
                 "consumes": [
@@ -59,6 +49,9 @@
                 ],
                 "produces": [
                     "application/json"
+                ],
+                "tags": [
+                    "Initialize"
                 ],
                 "summary": "Test Api Server",
                 "responses": {
@@ -76,9 +69,7 @@
         "common.Response": {
             "type": "object",
             "properties": {
-                "result": {
-                    "type": "object"
-                },
+                "result": {},
                 "status": {
                     "type": "boolean"
                 },

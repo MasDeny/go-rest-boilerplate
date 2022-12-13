@@ -15,12 +15,12 @@ import (
 // @version 1.0
 // @description This is my go gin boilerplate api server.
 // @termsOfService http://swagger.io/terms/
-// @contact.name Cozy
+// @contact.name MasDeny
 // @contact.url https://github.com/MasDeny
 // @license.name MIT
 // @license.url https://github.com/MasDeny/go-rest-boilerplate
-// @BasePath /api/v1
 // @host localhost:5050
+// @BasePath /api/v1
 func Run() {
     app := gin.New()
 

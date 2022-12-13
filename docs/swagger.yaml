@@ -1,28 +1,16 @@
-basePath: /api/v1
 definitions:
   common.Response:
     properties:
-      result:
-        type: object
+      result: {}
       status:
         type: boolean
       status_code:
         type: integer
     type: object
-host: localhost:5050
 info:
-  contact:
-    name: Cozy
-    url: https://github.com/MasDeny
-  description: This is my go gin boilerplate api server.
-  license:
-    name: MIT
-    url: https://github.com/MasDeny/go-rest-boilerplate
-  termsOfService: http://swagger.io/terms/
-  title: GoGin Boilerplate API
-  version: "1.0"
+  contact: {}
 paths:
-  /:
+  /intialize/:
     get:
       produces:
       - application/json
@@ -45,7 +33,9 @@ paths:
           schema:
             type: string
       summary: Server Greeting
-  /ping:
+      tags:
+      - Initialize
+  /intialize/ping:
     get:
       consumes:
       - application/json
@@ -58,4 +48,6 @@ paths:
           schema:
             $ref: '#/definitions/common.Response'
       summary: Test Api Server
+      tags:
+      - Initialize
 swagger: "2.0"
